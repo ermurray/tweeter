@@ -1,0 +1,36 @@
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  align-content: center;
+  width: 90%;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+#tweet-text {
+  outline: none;
+ display: flex;
+ border: none;
+ border-bottom: 3px solid #444444;
+ background-color: inherit;
+ height: 1.5em;
+}
+
+#tweet {
+  margin-top: 3px;
+  display: flex;
+  font-family: 'Bungee', cursive;
+  justify-content: space-between;
+}
+#submitTweet {
+  border-radius: 10%;
+  padding: 3px;
+  color: #b1b1b1;
+  background-color: #444444;
+}
