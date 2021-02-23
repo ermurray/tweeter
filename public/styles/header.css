@@ -7,3 +7,6 @@ header {
   background-image: url("../images/brick-wall--dark--520x260.png");
   padding-top: 3px;
 }
+h2 {
+  color: #070c2c;
+}
