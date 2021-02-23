@@ -1,0 +1,17 @@
+nav {
+  color: #FFFFFF;
+  background-color: #4056a1;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+}
+#logo {
+  font-size: 150%;
+  font-family: 'Bungee', cursive;
+  padding: 1.5em;
+
+}
+#write {
+  padding: 1.5em;
+  font-size: 100%;
+}
