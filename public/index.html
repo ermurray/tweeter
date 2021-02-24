@@ -47,10 +47,10 @@
         <h2 class="textHeaders">Compose Tweet</h2>
         <form action="/tweets" method="POST">
           <label for="tweet-text"></label>
-          <textarea name="text" id="tweet-text" maxlength="140" placeholder="What are you humming about?"></textarea>
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div id="tweet">
             <button type="submit" id="submitTweet">Tweet</button>
-            <output name="counter" id="counter" for="tweet-text">140</output>
+            <output name="counter" id="counter" class="underlimit" for="tweet-text">140</output>
           </div>
         </form>
       </section>

@@ -36,6 +36,9 @@ form {
   color: #b1b1b1;
   background-color: #444444;
 }
+.underlimit {
+  color: #b1b1b1;
+}
 
 .exceeded {
   color: red;
