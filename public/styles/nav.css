@@ -1,10 +1,14 @@
 nav {
   color: #b1b1b1;
   background-color: #0a0708;
-  height: 120px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   box-shadow: dimgrey;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 #logo {
   font-size: 150%;
