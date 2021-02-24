@@ -6,6 +6,7 @@ header {
   align-items: center;
   background-image: url("../images/brickwall-darkgrey.png");
   padding-top: 1em;
+  box-shadow: 2px 2px dimgrey;
 }
 h2 {
   color: #b1b1b1;

@@ -4,6 +4,7 @@ nav {
   height: 120px;
   display: flex;
   justify-content: space-between;
+  box-shadow: dimgrey;
 }
 #logo {
   font-size: 150%;
