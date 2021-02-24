@@ -6,6 +6,18 @@ article.tweets {
   flex-direction: column;
   align-items: center;
   box-shadow: 0 8px 6px -6px black ;
+  opacity: 0.4;
+  transition: 0.3s;
+}
+article.tweets .handle {
+  display: none;
+}
+article.tweets:hover .handle{
+  display: block;
+}
+
+article.tweets:hover {
+  opacity: 1;
 }
 
 article.tweets  header{
@@ -17,17 +29,32 @@ article.tweets  header{
   align-items: center;
   color: #444444;
   height: 100%;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   margin-top: 2%;
   padding: 0%;
 
 }
 
 article.tweets div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   height: 100%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  padding: 3px;
   margin: 1%;
 }
+article.tweets img {
+  padding-right: 10px;
+  height: 40px;
+}
+.tweets span {
+  padding-right: 20px;
+}
+.tweets span img {
+  height: 15px;
+}
+
 article.tweets p {
   width: 95%;
   border-bottom: solid #444444;
