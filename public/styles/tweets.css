@@ -6,10 +6,12 @@ article.tweets {
   flex-direction: column;
   align-items: center;
   box-shadow: 0 8px 6px -6px black ;
-  opacity: 0.4;
+  opacity: 0.5;
   transition: 0.3s;
 }
 article.tweets .handle {
+  justify-self: flex-end;
+  color: #a1a1a1;
   display: none;
 }
 article.tweets:hover .handle{
@@ -57,7 +59,8 @@ article.tweets img {
 
 article.tweets p {
   width: 95%;
-  border-bottom: solid #444444;
+  color: #444444;
+  border-bottom: solid #a1a1a1;
   margin-bottom: 1%;
 }
 
