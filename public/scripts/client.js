@@ -27,9 +27,36 @@ $(document).ready(function() {
         "text": "Je pense , donc je suis"
       },
       "created_at": 1614105433053
+    },
+    {
+      "user": {
+        "name": "Batman",
+        "avatars": "../images/Batman-Mask.png",
+        "handle": "@bruce"
+      },
+      "content": {
+        "text": "Je pense , donc je suis Batman"
+      },
+      "created_at": 1613008033053
+    },
+    {
+      "user": {
+        "name": "Robin",
+        "avatars": "../images/robin.png",
+        "handle": "@boyWonder"
+      },
+      "content": {
+        "text": "My real name is Richard but my friends call me Dick"
+      },
+      "created_at": 1613100533053
     }
+
   ];
   const createTweetElement = function(tweet) {
+    const aDay = 24 * 60 * 60 * 1000; //length of a day in ms
+    const now = Date.now();
+    const tweetDate = tweet.created_at;
+    const daysAgo = Math.floor((now - tweetDate) / aDay);
     let $tweetElm = $(
       `<article class= "tweets">
     <header>
@@ -41,7 +68,7 @@ $(document).ready(function() {
     </header>
     <p>${tweet.content.text}</p>
     <footer>
-      <div>${tweet.created_at}</div>
+      <div>${daysAgo} days Ago </div>
       <span>
         <img src="./images/baseline_thumb_up_alt_black_18dp.png">
         <img src="./images/outline_autorenew_black_18dp.png">

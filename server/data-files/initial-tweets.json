@@ -20,5 +20,27 @@
       "text": "Je pense , donc je suis"
     },
     "created_at": 1614117872379
+  },
+  {
+    "user": {
+      "name": "Batman",
+      "avatars": "../images/Batman-Mask.png",
+      "handle": "@bruce"
+    },
+    "content": {
+      "text": "Je pense , donc je suis Batman"
+    },
+    "created_at": 1613008033053
+  },
+  {
+    "user": {
+      "name": "Robin",
+      "avatars": "../images/robin.png",
+      "handle": "@boyWonder"
+    },
+    "content": {
+      "text": "My real name is Richard but my friends call me Dick"
+    },
+    "created_at": 1613100533053
   }
 ]
