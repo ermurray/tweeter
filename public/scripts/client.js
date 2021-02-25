@@ -98,18 +98,28 @@ const loadTweets = function() {
 };
 
 
+
+
 $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
     console.log('its the submit event default being prevented');
-    $.ajax({
-      url: "/tweets",
-      method: "POST",
-      data: $("form").serialize()
-    })
-      .then(res => {
-        console.log(res, $("form").serialize());
-      });
+    if (parseInt($("#counter").val()) === 140) {
+      alert("your tweet is blank");
+      return;
+    } else if (parseInt($("#counter").val()) < 0) {
+      alert("your not writing a novel here!");
+      return;
+    } else {
+      $.ajax({
+        url: "/tweets",
+        method: "POST",
+        data: $("form").serialize()
+      })
+        .then(res => {
+          console.log(res, $("form").serialize());
+        });
+    }
     
   });
   loadTweets();

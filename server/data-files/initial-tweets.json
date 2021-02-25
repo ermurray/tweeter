@@ -8,11 +8,7 @@
     "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-<<<<<<< HEAD
-    "created_at": 1614062859976
-=======
-    "created_at": 1613889336362
->>>>>>> ajax
+    "created_at": 1613893595528
   },
   {
     "user": {
@@ -23,7 +19,7 @@
     "content": {
       "text": "Je pense , donc je suis"
     },
-    "created_at": 1613975736362
+    "created_at": 1613979995528
   },
   {
     "user": {
@@ -34,7 +30,7 @@
     "content": {
       "text": "Je pense , donc je suis Batman"
     },
-    "created_at": 1614062136362
+    "created_at": 1614066395528
   },
   {
     "user": {
@@ -45,6 +41,6 @@
     "content": {
       "text": "My real name is Richard but my friends call me Dick"
     },
-    "created_at": 1614148536362
+    "created_at": 1614152795528
   }
 ]
