@@ -81,22 +81,25 @@ const createTweetElement = function(tweet) {
 const renderTweets = function(tweets) {
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
-    $('#tweets-container').append($tweet);
-    
+    $('#tweets-container').prepend($tweet); 
   }
 };
 
-const loadTweets = function() {
+const loadTweets = function(action) {
   $.ajax({
     url: "/tweets",
     method: "GET",
   })
     .then(function(tweets) {
       console.log('load tweets ok',tweets);
-      renderTweets(tweets);
+      action(tweets);
     });
 };
 
+const renderNewTweet = function(tweets) {
+  const $tweet = createTweetElement(tweets.pop());
+  $('#tweets-container').prepend($tweet);
+};
 
 
 
@@ -117,12 +120,13 @@ $(document).ready(function() {
         data: $("form").serialize()
       })
         .then(res => {
-          console.log(res, $("form").serialize());
+          console.log(res, "posting this tweet: ", $("form").serialize());
+          loadTweets(renderNewTweet);
         });
     }
     
   });
-  loadTweets();
+  loadTweets(renderTweets);
 });
 
 
