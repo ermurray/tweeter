@@ -122,6 +122,7 @@ $(document).ready(function() {
         .then(res => {
           console.log(res, "posting this tweet: ", $("form").serialize());
           loadTweets(renderNewTweet);
+          this.reset();
         });
     }
     
