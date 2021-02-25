@@ -50,6 +50,12 @@
 //     "created_at": 1613100533053
 //   }
 // ];
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = function(tweet) {
   const aDay = 24 * 60 * 60 * 1000; //length of a day in ms
   const now = Date.now();
@@ -64,7 +70,7 @@ const createTweetElement = function(tweet) {
     </div>
     <div class="handle">${tweet.user.handle}</div>
   </header>
-  <p>${tweet.content.text}</p>
+  <p>${escape(tweet.content.text)}</p>
   <footer>
     <div>${daysAgo} days Ago </div>
     <span>
@@ -75,6 +81,7 @@ const createTweetElement = function(tweet) {
   </footer>
   </article>`
   );
+  
   return $tweetElm;
 };
 
@@ -114,6 +121,7 @@ $(document).ready(function() {
       alert("your not writing a novel here!");
       return;
     } else {
+
       $.ajax({
         url: "/tweets",
         method: "POST",
@@ -123,6 +131,7 @@ $(document).ready(function() {
           console.log(res, "posting this tweet: ", $("form").serialize());
           loadTweets(renderNewTweet);
           this.reset();
+          $('#counter').text(140);
         });
     }
     
