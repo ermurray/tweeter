@@ -4,52 +4,52 @@
 * Reminder: Use (and do all your DOM work in) jQuery's document ready function
 */
 
-const tweetData = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1614019033053
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1614105433053
-  },
-  {
-    "user": {
-      "name": "Batman",
-      "avatars": "../images/Batman-Mask.png",
-      "handle": "@bruce"
-    },
-    "content": {
-      "text": "Je pense , donc je suis Batman"
-    },
-    "created_at": 1613008033053
-  },
-  {
-    "user": {
-      "name": "Robin",
-      "avatars": "../images/robin.png",
-      "handle": "@boyWonder"
-    },
-    "content": {
-      "text": "My real name is Richard but my friends call me Dick"
-    },
-    "created_at": 1613100533053
-  }
-];
+// const tweetData = [
+//   {
+//     "user": {
+//       "name": "Newton",
+//       "avatars": "https://i.imgur.com/73hZDYK.png",
+//       "handle": "@SirIsaac"
+//     },
+//     "content": {
+//       "text": "If I have seen further it is by standing on the shoulders of giants"
+//     },
+//     "created_at": 1614019033053
+//   },
+//   {
+//     "user": {
+//       "name": "Descartes",
+//       "avatars": "https://i.imgur.com/nlhLi3I.png",
+//       "handle": "@rd"
+//     },
+//     "content": {
+//       "text": "Je pense , donc je suis"
+//     },
+//     "created_at": 1614105433053
+//   },
+//   {
+//     "user": {
+//       "name": "Batman",
+//       "avatars": "../images/Batman-Mask.png",
+//       "handle": "@bruce"
+//     },
+//     "content": {
+//       "text": "Je pense , donc je suis Batman"
+//     },
+//     "created_at": 1613008033053
+//   },
+//   {
+//     "user": {
+//       "name": "Robin",
+//       "avatars": "../images/robin.png",
+//       "handle": "@boyWonder"
+//     },
+//     "content": {
+//       "text": "My real name is Richard but my friends call me Dick"
+//     },
+//     "created_at": 1613100533053
+//   }
+// ];
 const createTweetElement = function(tweet) {
   const aDay = 24 * 60 * 60 * 1000; //length of a day in ms
   const now = Date.now();
@@ -60,7 +60,7 @@ const createTweetElement = function(tweet) {
   <header>
     <div>
       <img src="${tweet.user.avatars}">
-      ${tweet.user.name}
+      <span>${tweet.user.name}<span>
     </div>
     <div class="handle">${tweet.user.handle}</div>
   </header>
@@ -77,6 +77,7 @@ const createTweetElement = function(tweet) {
   );
   return $tweetElm;
 };
+
 const renderTweets = function(tweets) {
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
@@ -84,9 +85,34 @@ const renderTweets = function(tweets) {
     
   }
 };
-$(document).ready(function() {
 
-  renderTweets(tweetData);
+const loadTweets = function() {
+  $.ajax({
+    url: "/tweets",
+    method: "GET",
+  })
+    .then(function(tweets) {
+      console.log('load tweets ok',tweets);
+      renderTweets(tweets);
+    });
+};
+
+
+$(document).ready(function() {
+  $("form").submit(function(event) {
+    event.preventDefault();
+    console.log('its the submit event default being prevented');
+    $.ajax({
+      url: "/tweets",
+      method: "POST",
+      data: $("form").serialize()
+    })
+      .then(res => {
+        console.log(res, $("form").serialize());
+      });
+    
+  });
+  loadTweets();
 });
 
 
