@@ -2,7 +2,7 @@ article.tweets {
   display: flex;
   border-radius: 10px;
   background-color: #c5ccca;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
   flex-direction: column;
   align-items: center;
   box-shadow: 0 8px 6px -6px black ;
@@ -75,3 +75,15 @@ article.tweets footer {
   margin-right: 2%;
 
 }
+
+
+
+/* 
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+} */
+

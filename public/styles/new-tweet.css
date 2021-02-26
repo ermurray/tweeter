@@ -5,7 +5,7 @@
   align-self: center;
   align-content: center;
   width: 100%;
-  margin-bottom: 2%;
+  margin-bottom: 4%;
   
 }
 
@@ -19,7 +19,7 @@ h2.textHeaders {
   display: flex;
   font-size: 85%;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   margin-bottom: 2%;
 
@@ -38,7 +38,7 @@ h2.textHeaders {
   margin-right: 2%;
   flex-direction: row;
   align-items: center;
-
+  max-width: 300px;
 
 }
 span.material-icons {
@@ -94,4 +94,14 @@ span.material-icons {
 
 .exceeded {
   color: red;
+}
+
+/* @media only screen and (min-width: 768px) {
+
+} */
+
+@media only screen and (min-width: 1024px) {
+  .new-tweet {
+    margin-top: 10%;
+  }
 }

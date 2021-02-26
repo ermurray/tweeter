@@ -31,3 +31,20 @@ header.user h2 {
   margin-bottom: 5px;
   margin-top: 1px;
 }
+
+/* @media only screen and (min-width: 768px) {
+
+} */
+
+@media only screen and (min-width: 1024px) {
+  header.user {
+    width: 30%;
+    margin-top: 10%;
+    max-width: 300px;
+    box-shadow: #929292;
+  }
+  
+  header.user div {
+    height: 60%;
+  }
+}
