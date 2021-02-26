@@ -107,18 +107,23 @@ const renderNewTweet = function(tweets) {
   const $tweet = createTweetElement(tweets.pop());
   $('#tweets-container').prepend($tweet);
 };
-
-
+const errIcon = `<span class="material-icons">error_outline</span>`;
 
 $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
-    console.log('its the submit event default being prevented');
     if (parseInt($("#counter").val()) === 140) {
-      alert("your tweet is blank");
+      $("#notValid").html(`${errIcon}   Let's try that again`).slideDown(500, function() {
+        $(this).fadeOut(3000);
+        
+      });
       return;
     } else if (parseInt($("#counter").val()) < 0) {
-      alert("your not writing a novel here!");
+      $("#notValid").html(`<span class="material-icons">
+      error_outline
+      </span> You're not writing a novel here!`).slideDown(500, function() {
+        $(this).fadeOut(3000);
+      });
       return;
     } else {
 

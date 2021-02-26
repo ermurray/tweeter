@@ -6,12 +6,44 @@
   align-content: center;
   width: 100%;
   margin-bottom: 2%;
+  
 }
 
 
 form {
   display: flex;
   flex-direction: column;
+}
+
+h2.textHeaders {
+  display: flex;
+  font-size: 85%;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-bottom: 2%;
+
+
+}
+
+#notValid {
+  display: none;
+  font-size: 80%;
+  color: red;
+  height: 70%;
+  border: 1px solid red;
+  flex-grow: 0.75;
+  border-radius: 4px ;
+  margin-left: 2%;
+  margin-right: 2%;
+  flex-direction: row;
+  align-items: center;
+
+
+}
+span.material-icons {
+  font-size: 18px;
+  padding-right: 5px;
 }
 
 #tweet-text {
@@ -23,6 +55,9 @@ form {
   height: 1.5em;
   width: 100%;
 }
+#tweet-text:focus {
+  box-shadow: 0px -1px 2px  #b1b1b1;
+}
 
 #tweet {
   margin-top: 3px;
@@ -31,11 +66,27 @@ form {
   justify-content: space-between;
   width: 98%;
 }
+
 #submitTweet {
   border-radius: 10%;
+  font-size: 80%;
   padding: 3px;
   color: #b1b1b1;
   background-color: #444444;
+}
+
+#submitTweet:hover,
+#submitTweet:focus {
+    background: #868686;
+}
+
+#submitTweet:focus {
+    outline: 1px solid #b1b1b1;
+    outline-offset: -4px;
+}
+
+#submitTweet:active {
+    transform: scale(0.99);
 }
 .underlimit {
   color: #b1b1b1;
