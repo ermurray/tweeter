@@ -1,55 +1,4 @@
-/*
-* Client-side JS logic goes here
-* jQuery is already loaded
-* Reminder: Use (and do all your DOM work in) jQuery's document ready function
-*/
 
-// const tweetData = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png",
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1614019033053
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd"
-//     },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1614105433053
-//   },
-//   {
-//     "user": {
-//       "name": "Batman",
-//       "avatars": "../images/Batman-Mask.png",
-//       "handle": "@bruce"
-//     },
-//     "content": {
-//       "text": "Je pense , donc je suis Batman"
-//     },
-//     "created_at": 1613008033053
-//   },
-//   {
-//     "user": {
-//       "name": "Robin",
-//       "avatars": "../images/robin.png",
-//       "handle": "@boyWonder"
-//     },
-//     "content": {
-//       "text": "My real name is Richard but my friends call me Dick"
-//     },
-//     "created_at": 1613100533053
-//   }
-// ];
 const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
@@ -88,7 +37,7 @@ const createTweetElement = function(tweet) {
 const renderTweets = function(tweets) {
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
-    $('#tweets-container').prepend($tweet); 
+    $('#tweets-container').prepend($tweet);
   }
 };
 
@@ -110,6 +59,10 @@ const renderNewTweet = function(tweets) {
 const errIcon = `<span class="material-icons">error_outline</span>`;
 
 $(document).ready(function() {
+  $("#navWrite").click(function() {
+    console.log("it was clicked");
+    $("#tweet-text").focus();
+  });
   $("form").submit(function(event) {
     event.preventDefault();
     if (parseInt($("#counter").val()) === 140) {

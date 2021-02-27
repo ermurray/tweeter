@@ -31,10 +31,8 @@ article.tweets  header{
   align-items: center;
   color: #444444;
   height: 100%;
-  /* border: 2px solid red; */
   margin-top: 2%;
   padding: 0%;
-
 }
 
 article.tweets div {
@@ -42,17 +40,19 @@ article.tweets div {
   flex-direction: row;
   align-items: center;
   height: 100%;
-  /* border: 1px solid black; */
   padding: 3px;
   margin: 1%;
 }
+
 article.tweets img {
   padding-right: 10px;
   height: 40px;
 }
+
 .tweets span {
   padding-right: 20px;
 }
+
 .tweets span img {
   height: 15px;
 }
@@ -75,15 +75,4 @@ article.tweets footer {
   margin-right: 2%;
 
 }
-
-
-
-/* 
-@media only screen and (min-width: 768px) {
-
-}
-
-@media only screen and (min-width: 1024px) {
-
-} */
 

@@ -31,7 +31,10 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span id='logo'>tweeter</span>
-      <div id= 'write'><b>Write</b> a new tweet</div>
+      <div id='write'>
+      <button type='button' id="navWrite"><b>Write</b></button>
+        a new tweet
+      </div>
     </nav>
     <header class="user">
       <div>
@@ -49,7 +52,6 @@
           <div id="notValid"></div>
         </h2>
         <form action="/tweets" method="POST">
-          <label for="tweet-text"></label>
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div id="tweet">
             <button type="submit" id="submitTweet">Tweet</button>

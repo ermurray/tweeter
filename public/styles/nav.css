@@ -23,13 +23,13 @@ nav {
   padding: 1.5em;
   font-size: 100%;
 }
+
+#navWrite {
+  color: #b1b1b1;
+  background-color: #0a0708;
+  border-radius: 2px;
+}
+
 .textHeaders{
   color: #5c5b5b
 }
-/* @media only screen and (min-width: 768px) {
-
-}
-
-@media only screen and (min-width: 1024px) {
-
-} */
