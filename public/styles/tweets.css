@@ -14,12 +14,18 @@ article.tweets .handle {
   color: #a1a1a1;
   display: none;
 }
+#icons {
+  display: none;
+}
 article.tweets:hover .handle{
   display: block;
 }
 
 article.tweets:hover {
   opacity: 1;
+}
+article.tweets:hover #icons {
+  display: block;
 }
 
 article.tweets  header{

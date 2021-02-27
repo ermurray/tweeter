@@ -22,7 +22,7 @@ const createTweetElement = function(tweet) {
   <p>${escape(tweet.content.text)}</p>
   <footer>
     <div>${daysAgo} days Ago </div>
-    <span>
+    <span id="icons">
       <img src="./images/baseline_thumb_up_alt_black_18dp.png">
       <img src="./images/outline_autorenew_black_18dp.png">
       <img src="./images/outline_bookmark_black_18dp.png">
