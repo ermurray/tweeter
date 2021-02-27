@@ -18,3 +18,5 @@ Tweeter is a simple, single-page Twitter clone where we were able to practice so
 
 - Express
 - Node 5.10.x or above
+- Chance
+- md5
